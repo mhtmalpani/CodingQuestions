@@ -106,3 +106,26 @@ Output:
          1, 2, 3, 4, 5, 6, 7
 
 ---
+
+### [Parentheses Balancer](https://github.com/mhtmalpani/CodingQuestions/blob/master/src/ParenthesesBalancer.kt)
+
+Given a string of round, curly, and square open and closing brackets, return whether the brackets are balanced (well-formed).
+
+For example, given the string "([])[]({})", should return true.
+
+Given the string "([)]" or "((()", should return false.
+
+
+_Additional:_
+
+How to handle an equation?
+
+For example, given the string "([2+3]*5)-[6+2]", should return true.
+
+
+_Additional:_
+
+How to handle a new pair of custom Parenthesis?
+
+For example, given the string "([xyxy])" and additional pair (x, y) should return true
+For example, given the string "[xyabb]" and additional pairs (x, y) & (a, b) should return true
