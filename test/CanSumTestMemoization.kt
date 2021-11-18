@@ -6,23 +6,23 @@ import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 
 @RunWith(Parameterized::class)
-class CanSumTest
+class CanSumTestMemoization
 constructor(
     private val target: Int,
     private val values: IntArray,
     private val expectedOutput: Boolean
 ) {
 
-    private lateinit var canSum: CanSum
+    private lateinit var canSumMemoization: CanSumMemoization
 
     @Before
     fun setUp() {
-        canSum = CanSum()
+        canSumMemoization = CanSumMemoization()
     }
 
     @Test
     fun `Test Data`() {
-        val result = canSum.canSumWithValues(target, values)
+        val result = canSumMemoization.canSumWithValues(target, values)
 
         Assert.assertEquals(expectedOutput, result)
     }
