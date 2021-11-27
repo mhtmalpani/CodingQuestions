@@ -15,7 +15,7 @@ class HasPath {
 
         adjacencyList.forEach {
             if (hashMap[it.first] == null)
-                hashMap[it.first] = mutableListOf<Int>()
+                hashMap[it.first] = mutableListOf()
             hashMap[it.first]?.add(it.second)
         }
 
