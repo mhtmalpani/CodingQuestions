@@ -13,15 +13,17 @@ class DFS {
         val dfsList: MutableList<Int> = mutableListOf()
 
         stack.push(startNode)
+        visited.add(startNode)
 
         while (stack.isNotEmpty()) {
             val current = stack.pop()
             dfsList.add(current)
-            visited.add(current)
 
             adjacencyList[current]?.forEach { neighbor ->
-                if (!visited.contains(neighbor))
+                if (!visited.contains(neighbor)) {
+                    visited.add(neighbor)
                     stack.add(neighbor)
+                }
             }
         }
 

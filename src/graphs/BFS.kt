@@ -9,17 +9,21 @@ class BFS {
         val adjacencyList = convertToHashMapAdjacency(edges)
 
         val queue: Queue<Int> = LinkedList()
+        val visited: MutableSet<Int> = mutableSetOf()
         val bfsList: MutableList<Int> = mutableListOf()
 
         queue.add(startNode)
+        visited.add(startNode)
 
         while (queue.isNotEmpty()) {
             val current = queue.poll()
             bfsList.add(current)
 
             adjacencyList[current]?.forEach { neighbor ->
-                if (!queue.contains(neighbor))
+                if (!visited.contains(neighbor)) {
+                    visited.add(neighbor)
                     queue.add(neighbor)
+                }
             }
         }
 
