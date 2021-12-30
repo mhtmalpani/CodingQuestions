@@ -1,4 +1,4 @@
-package Google;
+package google;
 
 public class MinJumps {
     public int jump(int[] A) {

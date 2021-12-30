@@ -1,4 +1,4 @@
-package Google;
+package google;
 
 import java.util.*;
 

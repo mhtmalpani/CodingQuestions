@@ -1,4 +1,4 @@
-package Google;
+package google;
 
 /**
  * https://www.interviewbit.com/problems/gas-station/
